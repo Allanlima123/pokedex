@@ -1,3 +1,11 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+}
+
 body {
 	background: #EFEFBB;
 	background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
@@ -16,14 +24,54 @@ h1 {
 	font-size: 54px;
 }
 
+.form_busca{
+	margin: 30px auto;
+	width: 40%;
+	height: 50px;
+}
+
+.form_busca .box_search #search_Pokemon{
+	width: 100%;
+	padding-left: 7px;
+	font-size: 20px;
+	color: #97b3e6;
+}
+
+.form_busca .box_search #search_Pokemon::placeholder{
+	font-size: 15px;
+	font-weight: 0;
+}
+
+.form_busca .box_search #search_Pokemon,
+.form_busca .box_search .btn_Buscar{
+	height: 40px;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+}
+
+/* .form_busca .box_search .btn_Buscar{
+	margin-left: 2px;
+	width: 22%;
+	cursor: pointer;
+	font-size: 15px;
+	color: #97b3e6;
+} */
+
 .pokedex {
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/* display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	grid-gap: 20px;
-	padding-inline-start: 0;
+	padding-inline-start: 0; */
 }
 
 .card {
+	margin: 20px;
+	flex: 0 1 calc(30%);
 	list-style: none;
 	padding: 40px;
 	color: #222;
@@ -115,7 +163,7 @@ h1 {
 
 .card-title {
 	text-transform: capitalize;
-	margin-bottom: 0px;
+	margin:15px 0 0 0;
 	font-size: 32px;
 	font-weight: normal;
 	position: relative;
